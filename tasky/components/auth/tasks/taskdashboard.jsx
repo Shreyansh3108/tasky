@@ -1,4 +1,3 @@
-// components/tasks/TaskDashboard.jsx
 import React, { useState, useEffect, useContext } from 'react';
 import TaskList from './TaskList';
 import TaskForm from './TaskForm';
@@ -70,7 +69,6 @@ const TaskDashboard = () => {
 
 export default TaskDashboard;
 
-// components/tasks/TaskList.jsx
 import React from 'react';
 import TaskItem from './TaskItem';
 
@@ -99,7 +97,6 @@ const TaskList = ({ tasks, onUpdateTask, onDeleteTask }) => {
 
 export default TaskList;
 
-// components/tasks/TaskItem.jsx
 import React, { useState } from 'react';
 
 const TaskItem = ({ task, onUpdateTask, onDeleteTask }) => {
@@ -267,7 +264,6 @@ const TaskItem = ({ task, onUpdateTask, onDeleteTask }) => {
 
 export default TaskItem;
 
-// components/tasks/TaskForm.jsx
 import React, { useState } from 'react';
 
 const TaskForm = ({ onAddTask }) => {
@@ -294,7 +290,6 @@ const TaskForm = ({ onAddTask }) => {
     
     onAddTask(newTask);
     
-    // Reset form
     setTitle('');
     setDescription('');
     setPriority('medium');
