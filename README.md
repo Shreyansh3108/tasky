@@ -25,29 +25,6 @@ A full-stack task management application with React frontend and Node.js/Express
 - JWT for authentication
 - Bcrypt for password hashing
 
-## Project Structure
-
-```
-/task-manager
-  /client             # React frontend
-    /public
-    /src
-      /components     # React components
-        /auth         # Authentication related components
-        /layout       # Layout components (navbar, etc.)
-        /tasks        # Task management components
-      /context        # React context for global state
-      /hooks          # Custom React hooks
-      App.js          # Main app component
-      index.js        # Entry point
-  /server             # Express backend
-    /middleware       # Custom middleware (auth, etc.)
-    /models           # Mongoose models
-    /routes           # API routes
-    index.js          # Server entry point
-  README.md
-```
-
 ## Setup Instructions
 
 ### Prerequisites
