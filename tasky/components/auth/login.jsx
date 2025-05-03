@@ -1,4 +1,3 @@
-// components/auth/Login.jsx
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -74,7 +73,6 @@ const Login = () => {
 
 export default Login;
 
-// components/auth/Register.jsx
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -189,7 +187,6 @@ const Register = () => {
 
 export default Register;
 
-// components/auth/PrivateRoute.jsx
 import React, { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
