@@ -1,4 +1,3 @@
-// hooks/useTaskData.js
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -11,17 +10,13 @@ export const useTaskData = (userId) => {
     const fetchTasks = async () => {
       setLoading(true);
       try {
-        // In a real app, we would fetch from an API
-        // For now, try to get tasks from localStorage
         const storedTasks = localStorage.getItem('tasks');
         const parsedTasks = storedTasks ? JSON.parse(storedTasks) : [];
         
-        // Filter for current user (if we have a userId)
         const userTasks = userId 
           ? parsedTasks.filter(task => task.userId === userId)
           : parsedTasks;
           
-        // If no stored tasks or empty array for user, create sample tasks
         if (!storedTasks || userTasks.length === 0) {
           const sampleTasks = [
             {
@@ -87,7 +82,6 @@ export const useTaskData = (userId) => {
       const updatedTasks = [...tasks, newTask];
       setTasks(updatedTasks);
       
-      // Update localStorage
       const storedTasks = localStorage.getItem('tasks');
       const parsedTasks = storedTasks ? JSON.parse(storedTasks) : [];
       localStorage.setItem('tasks', JSON.stringify([
@@ -110,7 +104,6 @@ export const useTaskData = (userId) => {
       
       setTasks(updatedTasks);
       
-      // Update localStorage
       const storedTasks = localStorage.getItem('tasks');
       const parsedTasks = storedTasks ? JSON.parse(storedTasks) : [];
       localStorage.setItem('tasks', JSON.stringify([
@@ -131,7 +124,6 @@ export const useTaskData = (userId) => {
       const updatedTasks = tasks.filter(task => task.id !== taskId);
       setTasks(updatedTasks);
       
-      // Update localStorage
       const storedTasks = localStorage.getItem('tasks');
       const parsedTasks = storedTasks ? JSON.parse(storedTasks) : [];
       localStorage.setItem('tasks', JSON.stringify(
